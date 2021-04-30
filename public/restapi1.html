@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+    <title>REST Api</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+  
+    <!-- Favicons -->
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="vendor/aos/aos.css" rel="stylesheet">
+  
+    <!-- Template Main CSS File -->
+    <link href="css/style.css" rel="stylesheet">
+  
+    
+  </head>
+<body>  
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo me-auto me-lg-0"><a href="index.html">COT<span>.</span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li ><a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
+          <li><a href="concept.html">Concept</a></li>
+          <li class="drop-down"><a href="things.html">Familiar Things</a>
+            <ul>
+              <li><a href="arduino.html">Arduino</a></li>
+              <li><a href="nodemcu.html">Node MCU</a></li>
+              <li><a href="esp32.html">ESP32</a></li>
+              <li><a href="linux.html">Linux</a></li>
+              <li><a href="raspbian.html">Raspbian</a></li>
+              <li><a href="java1.html">Java</a></li>
+              <li><a href="python.html">Python</a></li>
+              <li><a href="js1.html">Web JavaScript</a></li></ul>
+              </li>
+              <li class="active"><a href="#">REST API</a></li>
+              <li><a href="libraries.html">Libraries</a></li>
+              <li><a href="experiments.html">Experiments</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- .nav-menu -->
+      <a href="register.html" class="get-started-btn scrollto"><i class="fa fa-fw fa-user"></i>Get Started</a>
+
+    </div>
+  </header>
+
+
+
+
+  <section style="background-color:black;" class="d-flex align-items-center justify-content-center">
+    <div class="container" data-aos="fade-up">
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+      </div>
+      </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container" data-aos="fade-up">
+      <div class="row">
+        <div class="col-lg-10 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
+          <h3>Circus Of Things REST JSON commands</h3>
+          <p class="font-italic">
+            You need a token to be authenticated at Circus. Copy this token and paste it in your remote devices' scripts.
+          </p>
+
+
+         <input name="token" placeholder="you must be logged in to see the token"
+    style="background-color:rgb(192, 189, 189);border-radius: 20%;text-align:center;font-size:large;width:100%"> 
+    <br> <br> <br> <br> <br>
+    <p class="font-italic"><b>This API can't be easier, it has only two actions:</b><br>
+
+* WriteValue: Feed your Signal<br>
+* ReadValue: Read a Signal value (yours, shared with you or public)<br>
+<b>Below you can check them manually. Fill the parameters needed, press "Try" button and get server response.</b>
+</p>     
+        <fieldset>
+          <legend><b>Write Value</b></legend>
+          <form action="restapi1/write" method="POST" >
+            <table>
+            <tr><td>Key : </td><td><input required type="text" name="key" placeholder="The public key that identifies the signal to feed"></td></tr>
+            <tr><td>Value : </td><td><input  required type="number" name="value" placeholder="The actual value written"></td></tr>
+            <tr><td>Longitude : </td><td><input required type="number" name="lon" placeholder="Value of the longitude."></td></tr>
+            <tr><td>Latitude : </td><td><input required type="number" name="lat" placeholder="Value of the latitude."></td></tr>
+            <tr><td>Altitude : </td><td><input required type="number" name="alt" placeholder="Value of the altitude."></td></tr>
+          </table>
+             <button  class="don-btn" type="submit">TRY !!</button>          
+             </form>
+        </fieldset>    
+         <fieldset>
+          <legend><b>Read Value</b></legend>
+          <form action="restapi1/read" method="POST" >
+            <table>
+            <tr><td>Key : </td><td><input required type="text" name="key" placeholder="The public key that identifies the signal to feed"></td></tr>
+           </table>
+             <button  class="don-btn" type="submit">TRY !!</button>          
+             </form>
+        </fieldset>
+            
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+  <div id="preloader"></div>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="vendor/venobox/venobox.min.js"></script>
+    <script src="vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="vendor/counterup/counterup.min.js"></script>
+    <script src="vendor/aos/aos.js"></script>
+  
+    <!-- Template Main JS File -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

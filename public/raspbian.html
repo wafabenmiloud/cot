@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+    <title>Raspbian</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+  
+    <!-- Favicons -->
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="vendor/aos/aos.css" rel="stylesheet">
+  
+    <!-- Template Main CSS File -->
+    <link href="css/style.css" rel="stylesheet">
+   <link href="css/table.css" rel="stylesheet">
+    <style>h6{color:#03224c;text-decoration:underline;}</style>
+    
+  </head>
+<body>
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo me-auto me-lg-0"><a href="index.html">COT<span>.</span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li><a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
+            <li ><a href="arduino.html">Arduino</a></li>
+            <li><a href="nodemcu.html">Node MCU</a></li>
+            <li><a href="esp32.html">ESP32</a></li>
+            <li><a href="linux.html">Linux</a></li>
+            <li class="active"><a href="#">Raspbian</a></li>
+            <li><a href="java1.html">Java</a></li>
+            <li><a href="python.html">Python</a></li>
+            <li><a href="js1.html">Web JavaScript</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+      <a href="register.html" class="get-started-btn scrollto"><i class="fa fa-fw fa-user"></i>Get Started</a>
+
+    </div>
+  </header>
+
+  <section style="background-color:black;" class="d-flex align-items-center justify-content-center">
+    <div class="container" data-aos="fade-up">
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+      </div>
+      </div>
+  </section>
+  <section id="about" class="about">
+    <div class="container" data-aos="fade-up">
+      <div class="row">
+        <div class="col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
+          <h5><b> Set the commands on your linux</b></h5>
+        </div>
+      </div>
+      <div class="container" data-aos="fade-up">
+        
+            <h6><b>Set environment variable</b></h6>
+            <p>For the different scripts to work you will need to set up the global environment variable 
+              CIRCUSTOKEN which will let the server recognize you as a valid user.
+               <br>Place it at the end of your /etc/bash.bashrc file, like this:</p>
+            <p class="black">CIRCUSTOKEN=your_token_here</p>
+            <p>To find your token, log in, go to up-rigth corner photo and select account.</p>
+              <h6><b>Get the commands</b></h6>
+              <p>Follow the next steps to get get the circus commands described above available in your Raspberry.</p>
+               <p>* Make a temporary file and get in it</p>
+              <p class="black">sudo mkdir ~/temp<br>cd ~/temp</p>
+              <p>* Get the debian package with all you need from our site</p>
+              <p class="black">sudo wget https://circusofthings.com/deb/raspi/CircusRaspiLib.deb</p>
+              <p>* Unpack it and let it be installed</p>
+              <p class="black">sudo dpkg -i CircusRaspiLib.deb</p>
+              <p>* Give permissions to the new files to be executable by your user</p>
+              <p class="black">sudo chmod 755 /usr/local/bin/circus*</p>
+    </div>
+    </div><br><br>
+    <div class="container" data-aos="fade-up">
+      <div class="row">
+        <div class="col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
+          <h5><b> Available commands for Circus</b></h5>
+        </div>
+      </div>
+      <div class="container" data-aos="fade-up">
+        <p>Once you end with the steps above, these are the available commands in linux:</p>
+        <div style="border:grey solid;">
+          <p class="red">circusreadvalue [ options ] [ -k SIGNALKEY ]</p>
+          <p>Options:<br>-v: verbose<br>Will read the value of the signal defined by SIGNALKEY and put in stdout</p>
+        </div><br>
+        <div style="border:grey solid;">
+          <p class="red">circuswritevalue [ options ] [ -k SIGNALKEY ] [ -n NUMERICVALUE ]</p>
+          <p>Options:<br>-v: verbose<br>Will set the given NUMERICVALUE as the value of the signal defined by SIGNALKEY</p>
+        </div><br>
+        <div style="border:grey solid;">
+          <p class="red">circussignaltopin [ options ] [ -k SIGNALKEY ] [ -p GPIONUMBER ]</p>
+          <p>Options:<br>-v: verbose<br>-h: help<br>-F: force port direction if not correctly set<br>-r: maximum number of retries for the case in which server value can't be reached
+        <br>Recursively will set the value read from the input GPIO defined by GPIONUMBER as the value of the signal defined by SIGNALKEY.</p>
+        </div><br>
+        <div style="border:grey solid;">
+          <p class="red">circuspintosignal [ options ] [ -k SIGNALKEY ] [ -p GPIONUMBER ]</p>
+          <p>Options:<br>-v: verbose<br>-h: help<br>-F: force port direction if not correctly set<br>-r: maximum number of retries for the case in which server value can't be reached
+        <br>Recursively will set the value of the signal defined by SIGNALKEY ras the outputvalue at the GPIO defined by GPIONUMBER
+         Will refuse to put values different form '1' or '0' on the digital output.</p>
+        </div>
+        
+    </div>
+    </div><br><br>
+    <div class="container" data-aos="fade-up">
+      <div class="row">
+        <div class="col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
+          <h5><b> Raspbian libraries for Circus.</b></h5>
+        </div>
+      </div>
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
+            <table>
+
+            <thead><tr><th> Name</th><th>Description</th><th>Hardware</th><th>Library File</th></tr></thead>
+            <tbody>
+            <tr>
+              <td>CircusRaspiLib.deb</td>
+              <td>Implements ReadValue and WriteValue for Linux systems on command line.</td>
+              <td>Raspberry with Raspbian</td>
+              <td><a href="https://circusofthings.com/deb/raspi/CircusRaspiLib.deb">CircusRaspiLib.deb</a></td>
+            </tr>
+        </tbody>
+        </table> 
+          </div>
+        </div>
+     
+    </div>
+    </div>
+    
+
+  </section>
+  <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+  <div id="preloader"></div>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="vendor/venobox/venobox.min.js"></script>
+    <script src="vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="vendor/counterup/counterup.min.js"></script>
+    <script src="vendor/aos/aos.js"></script>
+  
+    <!-- Template Main JS File -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

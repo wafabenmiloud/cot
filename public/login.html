@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/formstyle.css">
+    <link href="vendor/aos/aos.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+</head>
+
+    <body>
+      <div class="form-body">
+        <div class="row">
+          <div class="form-holder">
+            <div class="form-content">
+              <div class="form-items">
+                <nav><a class="btn1" href="index.html"><i class="fa fa-home"></i></a></nav><br><br>
+                <h3>Get more things done with Loggin platform.</h3>
+                <div class="page-links">
+                  <a href="login.html">Login</a>
+                  <a href="register.html" class="active">Register</a>
+                </div>
+                <form action="/auth/login" method="POST" >
+                  <input class="form-control" type="email" name="email" placeholder="example@gmail.com" required>
+                  <input class="form-control" type="password" name="password" placeholder="Password" required>
+                  <div class="form-button">
+                    <button id="submit" type="submit" class="ibtn">Login</button>
+                  </div>
+                </form>
+                <div class="other-links">
+                  <span>Or Login with</span><a href="#">Facebook</a><a href="#">Google</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="vendor/aos/aos.js"></script>
+<script src="js/jquery/jquery.min.js"></script>    
+<script src="js/main.js"></script>
+    </body>
+  </html>
